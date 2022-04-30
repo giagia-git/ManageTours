@@ -1,0 +1,291 @@
+/* PC*/
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    #header {
+        width: 100%;
+        height: 10em;
+    }
+    #nav {
+        width: 100%;
+        height: 100%;
+    }
+    #nav>li {
+        width: auto;
+    }
+    .main-signin,
+    .main-signup {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        text-align: center;
+        padding: 0 15em;
+    }
+    #form-signup,
+    #form-signin {
+        width: auto;
+        height: auto;
+        padding: 0 0;
+    }
+    #signin-cancel {
+        float: right;
+    }
+    #signup-cancel {
+        float: right;
+    }
+    .form-label {
+        height: 25px;
+        font-size: 18px;
+        width: 100px;
+        margin-left: 1em;
+        margin-right: 1em;
+        float: left;
+        margin-top: 10px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    #text-signin,
+    #text-signup {
+        width: 20em;
+        height: 35px;
+        padding-left: 5px;
+        border: 1px solid grey;
+    }
+}
+
+
+/* Laptop-L */
+
+@media (min-width: 1360px) and (max-width: 1500px) {
+    #header {
+        width: 100%;
+        height: 10em;
+    }
+    #nav {
+        width: 100%;
+        height: 100%;
+    }
+    #nav>li {
+        width: auto;
+    }
+    .main-signin,
+    .main-signup {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        text-align: center;
+        padding: 0 28em;
+    }
+    #form-signup,
+    #form-signin {
+        width: auto;
+        height: auto;
+        padding: 0 0;
+    }
+    #signin-cancel {
+        float: right;
+    }
+    #signup-cancel {
+        float: right;
+    }
+    .form-label {
+        height: 25px;
+        font-size: 18px;
+        width: 100px;
+        margin-left: 1em;
+        margin-right: 1em;
+        float: left;
+        margin-top: 10px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    #text-signin,
+    #text-signup {
+        width: 20em;
+        height: 35px;
+        padding-left: 5px;
+        border: 1px solid grey;
+    }
+}
+
+
+/* Tablet & Mobile */
+
+@media (max-width:1023px) {
+    .btn {
+        padding: 15px 16px;
+    }
+    #nav .subnav a {
+        padding: 5px 12px;
+    }
+    .contact-form .form-control {
+        padding: 15px;
+    }
+    .contact-info {
+        line-height: 2;
+    }
+    .contact-submit-btn {
+        font-size: 16px;
+    }
+    .social-list {
+        font-size: 48px;
+    }
+    #footer .socials-list a {
+        margin: 0 8px;
+    }
+    #footer .copyright a {
+        padding: 12px 0;
+        display: inline-block;
+    }
+}
+
+
+/* Tablet */
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    #header {
+        width: 100%;
+        height: 11.5em;
+    }
+    #nav {
+        width: 100%;
+        height: 100%;
+    }
+    #nav>li {
+        width: auto;
+    }
+    .main-signin,
+    .main-signup {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        text-align: center;
+        padding: 0 6em;
+    }
+    #form-signup,
+    #form-signin {
+        width: auto;
+        height: auto;
+        padding: 0 auto;
+    }
+    #signin-cancel {
+        float: right;
+    }
+    #signup-cancel {
+        float: right;
+    }
+    .form-label {
+        height: 25px;
+        font-size: 18px;
+        width: 100px;
+        margin-left: 1em;
+        margin-right: 1em;
+        float: left;
+        margin-top: 10px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    #text-signin,
+    #text-signup {
+        width: 20em;
+        height: 35px;
+        padding-left: 5px;
+        border: 1px solid grey;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 739px) {
+    .s-col-full {
+        width: 100% !important;
+    }
+    .s-full-width {
+        width: 100% !important;
+    }
+    .s-mt-8 {
+        margin-top: 8px !important;
+    }
+    #nav>li {
+        display: block;
+    }
+    #nav>li:first-child {
+        display: inline-block;
+    }
+    #nav>li a {
+        padding: 1px 24px;
+    }
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 41px;
+    }
+    #header .mobile-menu-btn {
+        display: block;
+    }
+    #header .search-btn {
+        display: none;
+    }
+    #header {
+        width: 100%;
+        height: 11.5em;
+        overflow-y: auto;
+    }
+    #nav {
+        width: 100%;
+        height: 100%;
+    }
+    #nav>li {
+        width: auto;
+    }
+    .main-signin,
+    .main-signup {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        text-align: center;
+        padding: 1em 1em;
+        overflow-y: auto;
+    }
+    #form-signup,
+    #form-signin {
+        width: auto;
+        height: auto;
+        padding: 0 1em;
+    }
+    #signin-cancel {
+        float: right;
+    }
+    #signup-cancel {
+        float: right;
+    }
+    .form-label {
+        height: 25px;
+        font-size: 18px;
+        width: 100px;
+        margin-left: 1em;
+        margin-right: 1em;
+        float: left;
+        margin-top: 10px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    #text-signin,
+    #text-signup {
+        width: 20em;
+        height: 35px;
+        padding-left: 5px;
+        border: 1px solid grey;
+    }
+    .main-signin>#form-signin>div,
+    .main-signup>#form-signup>div {
+        margin: 0 0;
+    }
+}
