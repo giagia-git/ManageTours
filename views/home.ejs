@@ -1,0 +1,28 @@
+
+<html>
+    <head>
+        <title>res.render() Demo</title>
+    </head>
+    <body>
+        <h2>Welcome to GeeksforGeeks</h2>
+    </body>
+    <script>
+        const options = {
+            method: 'GET'
+        };
+        const url = 'api';
+
+        console.log(url);
+        
+        const fetchData = async () => {
+            try {
+                const reponse = await fetch(url);
+                const body = await reponse.json();
+                console.log(body);
+            } catch(error) {
+                alert(error);
+            }
+        }
+        fetchData();
+    </script>
+</html>

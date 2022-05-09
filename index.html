@@ -19,66 +19,66 @@
     </div>
     <div id="main">
         <div class="main-signin">
-            <form id="form-signin" class="row g-3">
+            <form action="http://localhost:3000/user/signin" method="POST" id="form-signin" class="row g-3">
                 <div class="col-md-12">
-                    <button id="signin-cancel">X</button>
+                    <input type="button" id="signin-cancel" value="X">
                 </div>
-                <h3>Đăng nhap</h3>
+                <h3>Sign in</h3>
                 <div class="col-md-12">
                     <label for="validationServer01" class="form-label">Account</label>
-                    <input id="text-signin" type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
-                    <div id="notification-signin" class="valid-feedback">
-                        Looks good!
+                    <input name="account" id="text-signin" type="text" class="form-control is-invalid" id="validationServer01" value="" required>
+                    <div id="notification-signin" class="notification-accountSignin invalid-feedback">
+                        Please choose a account !
                     </div>
                 </div>
                 <div class="col-md-12">
                     <label for="validationServer02" class="form-label">Password</label>
-                    <input id="text-signin" type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-                    <div id="notification-signin" class="valid-feedback">
-                        Looks good!
+                    <input name="password" id="text-signin" type="password" class="form-control is-invalid" id="validationServer02" value="" required>
+                    <div id="notification-signin" class="notification-passwordSignin invalid-feedback">
+                        Please choose a password !
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <input type="submit" id="btn-signin" value="Submit">
+                    <input type="submit" id="btn-signin" value="Next">
                 </div>
             </form>
         </div>
         <div class="main-signup">
-            <form id="form-signup" class="row g-3">
+            <form action="http://localhost:3000/user/signup" method="" id="form-signup" class="row g-3">
                 <div class="col-md-12">
-                    <button id="signup-cancel">X</button>
+                    <input type="button" id="signup-cancel" value="X">
                 </div>
-                <h3>Đăng ký</h3>
+                <h3>Sign up</h3>
                 <div class="col-md-12">
                     <label for="validationServer01" class="form-label">Account</label>
-                    <input id="text-signup" type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
-                    <div id="notification-signup" class="valid-feedback">
-                        Looks good!
+                    <input name="account" id="text-signup" type="text" class="form-control is-invalid" id="validationServer01" value="" required>
+                    <div id="notification-signup" class="notification-accountSignup invalid-feedback">
+                        Please choose a account !
                     </div>
                 </div>
                 <div class="col-md-12">
                     <label for="validationServer02" class="form-label">Email</label>
-                    <input id="text-signup" type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-                    <div id="notification-signup" class="valid-feedback">
-                        Looks good!
+                    <input name="email" id="text-signup" type="text" class="form-control is-invalid" id="validationServer02" value="" required>
+                    <div id="notification-signup" class="notification-emailSignup invalid-feedback">
+                        Please choose a email !
                     </div>
                 </div>
                 <div class="col-md-12">
                     <label for="validationServer02" class="form-label">Password</label>
-                    <input id="text-signup" type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-                    <div id="notification-signup" class="valid-feedback">
-                        Looks good!
+                    <input name="password" id="text-signup" type="password" class="form-control is-invalid" id="validationServer02" value="" required>
+                    <div id="notification-signup" class="notification-passwordSignup invalid-feedback">
+                        Please choose a password !
                     </div>
                 </div>
                 <div class="col-md-12">
                     <label for="validationServer02" class="form-label">Repassword</label>
-                    <input id="text-signup" type="text" class="form-control is-valid" id="validationServer02" value="Otto" required>
-                    <div id="notification-signup" class="valid-feedback">
-                        Looks good!
+                    <input name="repassword" id="text-signup" type="password" class="form-control is-invalid" id="validationServer02" value="" required>
+                    <div id="notification-signup" class="notification-repasswordSignup invalid-feedback">
+                        Please choose a repassword !
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <input type="submit" id="btn-signup" value="Submit">
+                    <input type="submit" id="btn-signup" value="Next">
                 </div>
             </form>
         </div>
@@ -135,80 +135,51 @@
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                     </svg><i class="bi bi-person-circle"></i><span id="nav-account" style="margin: 0 1em">Empty Account</span>
+                                                             <span id="nav-exit" style="margin: 0 1em">Exit</span>
                     </a>
                 </li>
                 <li>
                     <a id="nav-cart" href="#">
-                        <svg class="btn-list-cart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <svg style="color: red" class="btn-list-cart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                         </svg>
-                        <span class="btn-list-cart" style="margin: 0 1em">0</span>
-                        <div id="list-cart" class="row">
-                            <div id="list-cart-choose" class="col-12">
-                                <label id="list-cart-all-label" for="list-cart-all">Check all</label>
-                                <input id="list-cart-all" name="list-cart-all" type="checkbox">
-                                <button id="list-cart-all-cancel">X</button>
+                        <span id="count-item" class="btn-list-cart" style="margin: 0 1em">0</span>
+                        <div id="list-cart" class="row list-cart">
+                            <div id="list-cart-choose" class="col-12 row list-cart-choose">
+                                <label class="col-2" id="list-cart-all-label" for="list-cart-all">Check all</label>
+                                <input style="margin-top: 12px" class="col-1" id="list-cart-all" name="list-cart-all" type="checkbox">
+                                <button style="right: 1.5em; position: absolute" class="col-1" id="list-cart-all-cancel">X</button>
+                                <hr>
                             </div>
                             <div class="col-12">
                                 <div class="col-12 row">
-                                    <input id="list-cart-checkbox" class="col-2" type="checkbox">
-                                    <img id="list-cart-img" src="./assets/img/place/newyork.jpg" alt="Thanh Ngân đeo kính Quốc Giàu" class="col-2">
-                                    <div class="col-8 row">
-                                        <h5 id="list-cart-nametour" class="col-10">New York</h3>
-                                            <button id="list-cart-delete" class="col-2">Delete</button>
+                                    <hr>
+                                    <div class="col-6"></div>
+                                    <div class="col-2">
+                                        <h5 style="margin-top: 15px" id="list-cart-cost">0$</h5>
                                     </div>
+                                    <button class="col-3" id="list-cart-buy">Thanh toan</button>
+                                    <div class="col-1"></div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="col-12 row">
-                                    <input id="list-cart-checkbox" class="col-2" type="checkbox">
-                                    <img id="list-cart-img" src="./assets/img/place/newyork.jpg" alt="Thanh Ngân đeo kính Quốc Giàu" class="col-2">
-                                    <div class="col-8 row">
-                                        <h5 id="list-cart-nametour" class="col-10">New York</h3>
-                                            <button id="list-cart-delete" class="col-2">Delete</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="col-12 row">
-                                    <input id="list-cart-checkbox" class="col-2" type="checkbox">
-                                    <img id="list-cart-img" src="./assets/img/place/newyork.jpg" alt="Thanh Ngân đeo kính Quốc Giàu" class="col-2">
-                                    <div class="col-8 row">
-                                        <h5 id="list-cart-nametour" class="col-10">New York</h3>
-                                            <button id="list-cart-delete" class="col-2">Delete</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button id="list-cart-buy">Thanh toan</button>
                             </div>
                         </div>
                     </a>
                 </li>
             </ul>
         </div>
-        <!--         <img src="./assets/img/place/newyork.jpg" alt="Thanh Ngân đeo kính Quốc Giàu" class="place-img">
-                            <div class="place-body">
-                                <h3 class="place-heading">New York</h3>
-                                <p class="place-time">Fri 27 Nov 2016</p>
-                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="btn js-buy-tickets">Buy Tickets</button>
-        </div> -->
 
         <div id="slider">
             <div class="text-content">
-                <h2 class="text-heading">LOS ANGELES</h2>
-                <div class="text-description">We had the best time playing at Venice Beach!</div>
+                <h2 class="text-heading">Korea</h2>
+                <div class="text-description">We had the best time playing at Korea!</div>
             </div>
         </div>
 
         <div id="content">
             <div id="band" class="content-section">
-                <h2 class="section-heading">THE BAND</h2>
-                <p class="section-subheading">We love music</p>
-                <p class="about-content">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h2 class="section-heading">We are the best</h2>
+                <p class="section-subheading">Love music</p>
+                <p class="about-content">A concert tour (or simply tour) is a series of concerts by an artist or group of artists in different cities, countries or locations. Often concert tours are named to differentiate different tours by the same artist and to associate a specific tour with a particular album or product. Especially in the popular music world, such tours can become large-scale enterprises that last for several months or even years, are seen by hundreds of thousands or millions of people, and bring in millions of dollars in ticket revenues. A performer who embarks on a concert tour is called a touring artist.</p>
                 <div class="row menber-list">
                     <div class="col col-third s-col-full mt-32 text-center">
                         <p class="menber-name">Name</p>
@@ -228,11 +199,11 @@
 
             <div id="tour" class="tour-section">
                 <div class="content-section">
-                    <h2 class="section-heading text-white">TOUR DATES</h2>
+                    <h2 class="section-heading text-white">TOUR</h2>
                     <p class="section-subheading text-white">Remember to book your tickets!</p>
                     <div class="place-list row">
-                        <div class="col-4 col-third s-col-full mt-16">
-                            <img src="./assets/img/place/newyork.jpg" alt="Thanh Ngân đeo kính Quốc Giàu" class="place-img">
+                        <div class="place-info col-4 col-third s-col-full mt-16">
+                            <img id="place-image" src="./assets/img/place/newyork.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
@@ -242,8 +213,8 @@
                             </div>
                         </div>
 
-                        <div class="col-4 col-third s-col-full mt-16">
-                            <img src="./assets/img/place/paris.jpg" alt="Quà sinh nhật của Thanh Ngân" class="place-img">
+                        <div class="place-info col-4 col-third s-col-full mt-16">
+                            <img src="./assets/img/place/paris.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
@@ -253,8 +224,8 @@
                             </div>
                         </div>
 
-                        <div class="col-4 col-third s-col-full mt-16">
-                            <img src="./assets/img/place/sanfran.jpg" alt="Thanh Ngân rất đẹp" class="place-img">
+                        <div class="place-info col-4 col-third s-col-full mt-16">
+                            <img src="./assets/img/place/sanfran.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
@@ -263,8 +234,8 @@
                                 <button class="btn s-full-width js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col-4 col-third s-col-full mt-16">
-                            <img src="./assets/img/place/sanfran.jpg" alt="Thanh Ngân rất đẹp" class="place-img">
+                        <div class="place-info col-4 col-third s-col-full mt-16">
+                            <img src="./assets/img/place/sanfran.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
@@ -273,8 +244,8 @@
                                 <button class="btn s-full-width js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col-4 col-third s-col-full mt-16">
-                            <img src="./assets/img/place/sanfran.jpg" alt="Thanh Ngân rất đẹp" class="place-img">
+                        <div class="place-info col-4 col-third s-col-full mt-16">
+                            <img src="./assets/img/place/sanfran.jpg" alt=""" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
@@ -283,8 +254,8 @@
                                 <button class="btn s-full-width js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col-4 col-third s-col-full mt-16">
-                            <img src="./assets/img/place/sanfran.jpg" alt="Thanh Ngân rất đẹp" class="place-img">
+                        <div class="place-info col-4 col-third s-col-full mt-16">
+                            <img src="./assets/img/place/sanfran.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
@@ -300,37 +271,18 @@
 
             <div id="contact" class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
-                <p class="section-subheading">Fan? Drop a note!</p>
                 <p class="about-content">
                 </p>
                 <div class="row contact-content">
                     <div class="col col-haft s-col-full contact-info">
                         <p><i class="ti-location-pin"></i>VietNam</p>
-                        <p><i class="ti-mobile"></i>Phone: <a href="tel:+81907236881">19001001</a></p>
-                        <p><i class="ti-email"> </i>Email: <a href="mailto:mail@mail.com">ngoknghech@gmail.com</a> </p>
-                    </div>
-                    <div class="col col-haft s-col-full contact-form">
-                        <form action="">
-                            <div class="row">
-                                <div class="col col-half s-col-full">
-                                    <input type="text" name="" placeholder="Full name" required id="" class="form-control">
-                                </div>
-                                <div class="col col-half s-col-full s-mt-8">
-                                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mt-8">
-                                <div class="col col-full">
-                                    <input type="text" name="" placeholder="Message" required id="" class="form-control">
-                                </div>
-                            </div>
-                            <input class="contact-submit-btn btn pull-right mt-16 s-full-width" type="submit" value="Send">
-                        </form>
+                        <p><i class="ti-mobile"></i>Phone: <a href="tel:+81907236881">0939760757</a></p>
+                        <p><i class="ti-email"> </i>Email: <a href="mailto:mail@mail.com">luctungthungractimxacnguoiyeu@gmail.com</a> </p>
                     </div>
                 </div>
             </div>
             <div class="map-section">
-                <img src="./assets/img/contact/map.jpg" alt="Map">
+                <img src="./assets/img/contact/summertour.jpg" alt="Map">
 
             </div>
         </div>
@@ -341,11 +293,7 @@
                 <a href="https://www.facebook.com/profile.php?id=100040503256335"><i class="ti-facebook"></i></a>
                 <a href=""><i class="ti-instagram"></i></a>
                 <a href=""><i class="ti-youtube"></i></a>
-                <!--                 <a href=""><i class="ti-pinterest"></i></a>
-                <a href=""><i class="ti-twitter"></i></a>
-                <a href=""><i class="ti-linkedin"></i></a> -->
             </div>
-            <!--             <div class="copyright">project by <a href="">Quốc Giàu</a></div> -->
         </div>
     </div>
     <div class="modal js-modal">
@@ -354,34 +302,28 @@
                 <i class="ti-close"></i>
             </div>
             <header class="modal-header">
-                <i class="modal-heading-icon ti-bag"></i> Tickets
+                Number Tickets
             </header>
 
             <div class="modal-body">
                 <label for="tickets-quantily" class="modal-label">
                     <i class="ti-shopping-cart">   </i>
-                    Tickets, $15 per person
+                    number Tickets?
                 </label>
-                <input id="tickets-quantily" type="text" class="modal-input" placeholder="How many">
-
-                <label for="tickets-email" class="modal-label">
-                    <i class="ti-shopping-cart">   </i>
-                    Send to
-                </label>
-                <input id="tickets-email" type="text" class="modal-input" placeholder="How many">
+                <input id="tickets-quantily" type="text" class="modal-input" placeholder="How many (Input Number)">
 
                 <button id="buy-tickets">
                     pay <i class="ti-check"></i>
                 </button>
             </div>
-            <footer class="modal-footer">
-                <p class="modal-help">need <a href="">help?
-                </a></p>
-            </footer>
         </div>
 
     </div>
     <script src="index.js"></script>
+    <script src="./controller/getParams.js"></script>
+    <script src="./controller/fetchData.js"></script>
+    <script src="./controller/checkForm.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script language="javascript">
         let btnSignin = document.getElementById('nav-signin');
         let btnSignup = document.getElementById('nav-signup');
@@ -393,6 +335,8 @@
         let listCart = document.getElementById('list-cart');
         let btnListcartcancel = document.getElementById('list-cart-all-cancel');
         let btnListcart = document.querySelectorAll('.btn-list-cart');
+        let showCart = document.getElementById('nav-cart');
+        let listCartchoose = document.getElementById('list-cart-choose');
 
         btnSignin.addEventListener('click', function(event) {
             mainSignup.classList.remove('active-show');
@@ -422,29 +366,336 @@
         })
 
         btnListcartcancel.addEventListener('click', function(event) {
-            listCart.classList.add('hidden');
             listCart.style.display = "none";
         })
         for (let i = 0; i < btnListcart.length; ++i) {
             btnListcart[i].addEventListener('click', function(event) {
-                listCart.classList.remove('hidden');
-                listCart.style.display = "block";
+                if(account.textContent == "Empty Account") {
+                    alert('Đăng nhập vào hệ thống!');
+                    mainSignup.classList.remove('active-show');
+                    mainSignup.classList.add('active-hidden');
+                    mainSignin.classList.add('active-show');
+                    mainSignin.classList.remove('active-hidden');
+                } else {
+                    listCart.style.display = "block";
+                }
+                console.log(mainSignin);
             })
         }
 
+
+        function checkListCart(event) {
+            let conditionCheck1 = event.target.classList.contains('list-cart');
+            let conditionCheck2 = event.target.classList.contains('list-cart-choose');
+            if(conditionCheck1 && conditionCheck2) {
+                return true;
+            }
+            return false;
+        }
+
+        let placeInfo = document.querySelectorAll('.place-info');
+        let placeImg = document.querySelectorAll('.place-img');
+        let placeHeading = document.querySelectorAll('.place-heading');
+        let placeDesc = document.querySelectorAll('.place-desc');
+        let placeCost = document.querySelectorAll('.place-cost');
+        let placeTime = document.querySelectorAll('.place-time');
+        let btnTickets = document.querySelectorAll('.js-buy-tickets');
+        let buyTicket = document.getElementById('buy-tickets');
+        let numberTicket = document.getElementById('tickets-quantily');
+        let numberItem = document.getElementById('count-item');
+
+
+
+
+        let menberName = document.querySelectorAll('.menber-name');
+        let menberImg = document.querySelectorAll('.menber-img');
+        var check = false;
+        var countMenber = 0;
+        var countPlace = 0;
+        var date = new Date();
+
+        let account = document.getElementById('nav-account');
+        let exitAccount = document.getElementById('nav-exit');
+
         window.addEventListener('click', function(event) {
-            if (!listCart.classList.contains('hidden')) {
-                listCart.classList.add('hidden');
-            }
-            if (mainSignin.classList.contains("active-show")) {
+            if(mainSignin.classList.contains('active-show') && event.target.classList.contains('main-signin')) {
                 mainSignin.classList.remove('active-show');
-                mainSignin.classList.add('active-hidden');
-            }
-            if (mainSignup.classList.contains('active-show')) {
                 mainSignup.classList.remove('active-show');
-                mainSignup.classList.add('active-hidden');
+            } else if(mainSignup.classList.contains('active-show') && event.target.classList.contains('main-signup')) {
+                mainSignin.classList.remove('active-show');
+                mainSignup.classList.remove('active-show');   
+            } 
+            if(account.textContent != "Empty Account" 
+            && !(event.target["id"] == "nav-account" 
+            || event.target["id"] == "nav-exit")) {
+                exitAccount.style.opacity = 0;
             }
         })
+
+        account.addEventListener("click", function(event) {
+            if(account.textContent != "Empty Account") {
+                exitAccount.style.opacity = 1;
+            }
+        })
+
+        exitAccount.addEventListener("click", function(event) {
+            let yourisexit = confirm("You can exit?");
+            if(yourisexit && account.innerText != "Empty Account") {
+                localStorage.removeItem("username");
+                account.textContent = "Empty Account";
+                exitAccount.style.opacity = 0;
+            }
+        })
+
+
+        const urlAPI = "http://localhost:3000/api";
+        const urlUser = "http://localhost:3000/user/signin";
+
+
+        const handlerFetchData = (url) => {
+            return fetchData(url);
+        }
+
+        async function handlerAPI() {
+            var response = await handlerFetchData(urlAPI);
+            const arrayData = Object.values(response.tracks);
+            arrayData.map((value,index) => {
+                const numberRandom = Math.floor(Math.random()*5);
+                // console.log("index: " + index);
+                // console.log("numberRandom: " + numberRandom);
+                if(countMenber<menberName.length && index > numberRandom) {
+                    menberName[countMenber].textContent = value.share.subject;
+                    menberImg[countMenber].src = value.share.image;
+                    countMenber++;
+                }
+                if(countPlace<placeHeading.length && index > numberRandom) {
+                    placeInfo[countPlace].idx = index;
+                    placeImg[countPlace].src = value.share.image;
+                    placeHeading[countPlace].textContent = value.share.subject;
+                    placeTime[countPlace].textContent = date.getDay() + "-" + date.getMonth() + "-" + date.getFullYear();
+                    placeDesc[countPlace].textContent = value.share.text;
+                    placeCost[countPlace].textContent = Math.floor(Math.random() * 1000) + "$";
+                    btnTickets[countPlace].classList.add("id-" + countPlace);
+                    countPlace++;
+                }
+            })
+        }
+
+        btnTickets.forEach((btn,index) => {
+            btn.addEventListener('click', function(event) {
+                localStorage.setItem('buyItem',"id-" + index);
+            })
+        })
+
+        function inputTicket(numberTicket) {
+            if(numberTicket != "" && isFinite(numberTicket)) {
+                return true;
+            }
+            return false;
+        }
+
+        let countItem = 0;
+
+        buyTicket.addEventListener('click', function(event) {
+            if(!inputTicket(numberTicket.value)) {
+                alert('Hãy nhập vào số lượng (chữ số)');
+            }
+            if(account.textContent != "Empty Account" && inputTicket(numberTicket.value)) {
+                countItem++;
+                numberItem.textContent = countItem;
+
+                let iid = localStorage.getItem('buyItem').slice(3);
+                let tag1 = createElement('div','class','col-12');
+                let tag2 = createElement('div','class','col-12 row');
+                let tag3 = createElement('div','class','col-8 row');
+
+                let input = createElement('input','id','list-cart-checkbox');
+                input.setAttribute('class','col-2');
+                input.setAttribute('type','checkbox');
+                
+                let img = createElement('img','id','list-cart-img');
+                img.setAttribute('src',placeImg[iid].src);
+                img.setAttribute('alt','');
+                img.setAttribute('class','col-2');
+                let strCostitem = placeCost[iid].textContent;
+                let costItem = strCostitem.slice(0,strCostitem.length-1);
+
+                let h5 = createElement('h5','id','list-cart-nametour',placeHeading[iid].textContent);
+                h5.setAttribute('class','col-5');
+                let h4 = createElement('h4','id','list-cart-nametour',parseInt(costItem)*parseInt(numberTicket.value) + "$");
+                h4.setAttribute('class','col-3');
+                let h4Element = createElement('h4','id','list-cart-nametour',numberTicket.value);
+                h4Element.setAttribute('class','col-2');
+                let btnCartdelete = createElement('button','id','list-cart-delete','Delete');
+                btnCartdelete.setAttribute('class','col-2');
+
+                tag1.append(tag2);
+                tag2.append(input);
+                tag2.append(img);
+                tag2.append(tag3);
+                tag3.append(h5);
+                tag3.append(h4Element);
+                tag3.append(h4);
+                tag3.append(btnCartdelete);
+
+                listCartchoose.append(tag1);
+            } else {
+                alert('Chua nhap tai khoan');
+            }
+        })
+
+        function createElement(tagName,attr,value,content) {
+            let tag = document.createElement(tagName);
+            tag.setAttribute(attr,value);
+            tag.textContent = content;
+            return tag;
+        }
+
+        handlerAPI();
+        getParams();
+
+
+        let formSignin = document.getElementById('form-signin');
+        let formSignup = document.getElementById('form-signup');
+
+        let accountSignin = formSignin["account"];
+        let alert_accountSignin = document.querySelector('.notification-accountSignin');
+        let passwordSignin = formSignin["password"];
+        let alert_passwordSignin = document.querySelector('.notification-passwordSignin');
+
+        let accountSignup = formSignup["account"];
+        let alert_accountSignup = document.querySelector('.notification-accountSignup');
+        let emailSignup = formSignup["email"];
+        let alert_emailSignup = document.querySelector('.notification-emailSignup');
+        let passwordSignup = formSignup["password"];
+        let alert_passwordSignup = document.querySelector('.notification-passwordSignup');
+        let repasswordSignup = formSignup["repassword"];
+        let alert_repasswordSignup = document.querySelector('.notification-repasswordSignup');
+
+        formSignin.addEventListener("change", function(e) {
+            switch(e.target) {
+                case accountSignin :
+                    if(checkAccount(accountSignin) && accountSignin.value != "") {
+                        accountSignin.classList.remove("is-invalid");
+                        accountSignin.classList.add("is-valid");
+                        alert_accountSignin.classList.remove("invalid-feedback");
+                        alert_accountSignin.classList.add("valid-feedback");
+                        alert_accountSignin.innerHTML = "Look good!";
+                    } else {
+                        accountSignin.classList.add("is-invalid");
+                        accountSignin.classList.remove("is-valid");
+                        alert_accountSignin.classList.add("invalid-feedback");
+                        alert_accountSignin.classList.remove("valid-feedback");
+                        alert_accountSignin.innerHTML = "Please choose a account!";
+                    }
+                    break;
+                case passwordSignin : 
+                    if(checkPassword(passwordSignin) && passwordSignin.value != "") {
+                        passwordSignin.classList.remove("is-invalid");
+                        passwordSignin.classList.add("is-valid");
+                        alert_passwordSignin.classList.remove("invalid-feedback");
+                        alert_passwordSignin.classList.add("valid-feedback");
+                        alert_passwordSignin.innerHTML = "Look good!";
+                    } else {
+                        passwordSignin.classList.add("is-invalid");
+                        passwordSignin.classList.remove("is-valid");
+                        alert_passwordSignin.classList.add("invalid-feedback");
+                        alert_passwordSignin.classList.remove("valid-feedback");
+                        alert_passwordSignin.innerHTML = "Please choose a password!";
+                    }
+                    break;
+                default :
+                    break;
+            }
+        })
+
+        formSignup.addEventListener("change", function(e) {
+            switch(e.target) {
+                case accountSignup :
+                if(checkAccount(accountSignup) && accountSignup.value != "") {
+                    accountSignup.classList.remove("is-invalid");
+                        accountSignup.classList.add("is-valid");
+                        alert_accountSignup.classList.remove("invalid-feedback");
+                        alert_accountSignup.classList.add("valid-feedback");
+                        alert_accountSignup.innerHTML = "Look good!";
+                    } else {
+                        accountSignup.classList.add("is-invalid");
+                        accountSignup.classList.remove("is-valid");
+                        alert_accountSignup.classList.add("invalid-feedback");
+                        alert_accountSignup.classList.remove("valid-feedback");
+                        alert_accountSignup.innerHTML = "Please choose a account!";
+                    }
+                    break;
+                case emailSignup :
+                    if(checkEmail(emailSignup) && emailSignup.value != "") {
+                        emailSignup.classList.remove("is-invalid");
+                        emailSignup.classList.add("is-valid");
+                        alert_emailSignup.classList.remove("invalid-feedback");
+                        alert_emailSignup.classList.add("valid-feedback");
+                        alert_emailSignup.innerHTML = "Look good!";
+                    } else {
+                        emailSignup.classList.add("is-invalid");
+                        emailSignup.classList.remove("is-valid");
+                        alert_emailSignup.classList.add("invalid-feedback");
+                        alert_emailSignup.classList.remove("valid-feedback");
+                        alert_emailSignup.innerHTML = "Please choose a account!";
+                    }
+                    break;
+                case passwordSignup : 
+                if(checkPassword(passwordSignup) && passwordSignup.value != "") {
+                    passwordSignup.classList.remove("is-invalid");
+                    passwordSignup.classList.add("is-valid");
+                    alert_passwordSignup.classList.remove("invalid-feedback");
+                    alert_passwordSignup.classList.add("valid-feedback");
+                    alert_passwordSignup.innerHTML = "Look good!";
+                } else {
+                    passwordSignup.classList.add("is-invalid");
+                    passwordSignup.classList.remove("is-valid");
+                    alert_passwordSignup.classList.add("invalid-feedback");
+                    alert_passwordSignup.classList.remove("valid-feedback");
+                    alert_passwordSignup.innerHTML = "Please choose a account!";
+                }
+                    break;  
+                case repasswordSignup :
+                if(checkRepassword(passwordSignup,repasswordSignup) && repasswordSignup.value != "") {
+                        repasswordSignup.classList.remove("is-invalid");
+                        repasswordSignup.classList.add("is-valid");
+                        alert_repasswordSignup.classList.remove("invalid-feedback");
+                        alert_repasswordSignup.classList.add("valid-feedback");
+                        alert_repasswordSignup.innerHTML = "Look good!";
+                    } else {
+                        repasswordSignup.classList.add("is-invalid");
+                        repasswordSignup.classList.remove("is-valid");
+                        alert_repasswordSignup.classList.add("invalid-feedback");
+                        alert_repasswordSignup.classList.remove("valid-feedback");
+                        alert_repasswordSignup.innerHTML = "Please choose a account!";
+                    }
+                    break;
+                default :
+                    break;
+            }
+        })
+
+        formSignin.addEventListener("submit", (event) => {
+            if(alert_accountSignin.classList.contains("valid-feedback") && alert_passwordSignin.classList.contains("valid-feedback")) {
+
+            } else {
+                console.log("Error!");
+                event.preventDefault();
+            }
+        })
+
+        formSignup.addEventListener("submit", (event) => {
+            if(alert_accountSignup.classList.contains("valid-feedback") && alert_passwordSignup.classList.contains("valid-feedback")
+            && alert_emailSignup.classList.contains("valid-feedback") && alert_repasswordSignup.classList.contains("valid-feedback")) {
+
+            } else {
+                console.log("Error!");
+                event.preventDefault();
+            }
+        })
+        
+        
     </script>
 </body>
 
